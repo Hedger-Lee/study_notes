@@ -45,15 +45,15 @@
 
 > 执行作业
 
-- `-rep:Repositoryname`任务包所在存储名
+- `-rep:Repository name`任务包所在存储名
 
-- `-user:Repositoryusername`执行人
+- `-user:Repository username`执行人
 
-- `-pass:Repositorypassword`执行人密码
+- `-pass:Repository password`执行人密码
 
-- `-job:Thenameofthejobtolaunch`任务包名称
+- `-job:The name of the job to launch`任务包名称
 
-- `-dir:Thedirectory(don't forget the leading / or\)`
+- `-dir:The directory(don't forget the leading / or\)`
 
 - `-file:The filename(JobXML) to launch`
 

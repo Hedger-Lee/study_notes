@@ -18,6 +18,20 @@ sudo yum install webkitgtk-2.4.9-1.el7.x86_64.rpm
 yum -y install redhat-lsb
 ```
 
+### 3.安装swt插件
+
+```
+yum -y install gtk2.i686 gtk2-engines.i686 PackageKit-gtk-module.i686 PackageKit-gtk-module.x86_64 libcanberra-gtk2.x86_64 libcanberra-gtk2.i686
+```
+
+### 4.无法图形化界面，安装rpm xorg-x11-xauth
+
+```
+yum install xorg-x11-xauth
+```
+
+
+
 ## Windows下安装
 
 ### 1.解决运行spoon.bat无法启动，dos窗口一闪而过

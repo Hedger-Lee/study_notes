@@ -17,6 +17,22 @@ if (prevRow == null &&(prevRow.size()=0))
 }
 ```
 
+#### 获取Excel数据
+
+```
+prevRow.get(0).getString("table_name","")
+```
+
+#### 获取csv数据
+
+```
+prevRow.get(0).getString(0,"table_name")
+```
+
+
+
+
+
 kettle中使用js打印日志信息
 
 ```
