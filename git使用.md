@@ -34,3 +34,13 @@ ssh-keygen.exe -t rsa -C "邮箱"
 git clone HTTP链接
 ```
 
+### 避免每次都要输入密码
+
+将http链接改为ssh链接
+
+```
+git remote rm origin
+git remote -v
+git remote add origin [ssh链接]
+```
+
