@@ -25,3 +25,5 @@ sh  ----> /bin/sh
 * * * * * . /etc/profile;/bin/sh /var/www/runjob/test.sh
 ```
 
+
+
