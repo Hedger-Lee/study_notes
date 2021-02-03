@@ -41,6 +41,28 @@
 
 ```
 
+| Switch        | Purpose                                                      |
+| ------------- | ------------------------------------------------------------ |
+| rep           | Enterprise or database repository name, if you are using one |
+| user          | Repository username                                          |
+| pass          | Repository password                                          |
+| trans         | The name of the transformation (as it appears in the repository) to launch |
+| dir           | The repository directory that contains the transformation, including the leading slash |
+| file          | If you are calling a local KTR file, this is the filename, including the path if it is not in the local directory |
+| level         | The logging level (Basic, Detailed, Debug, Rowlevel, Error, Nothing) |
+| logfile       | A local filename to write log output to                      |
+| listdir       | Lists the directories in the specified repository            |
+| listtrans     | Lists the transformations in the specified repository directory |
+| listrep       | Lists the available repositories                             |
+| exprep        | Exports all repository objects to one XML file               |
+| norep         | Prevents Pan from logging into a repository. If you have set the KETTLE_REPOSITORY, KETTLE_USER, and KETTLE_PASSWORD environment variables, then this option will enable you to prevent Pan from logging into the specified repository, assuming you would like to execute a local KTR file instead. |
+| safemode      | Runs in safe mode, which enables extra checking              |
+| version       | Shows the version, revision, and build date                  |
+| param         | Set a named parameter in a name=value format. For example: -param:FOO=bar |
+| listparam     | List information about the defined named parameters in the specified transformation. |
+| maxloglines   | The maximum number of log lines that are kept internally by PDI. Set to 0 to keep all rows (default) |
+| maxlogtimeout | The maximum age (in minutes) of a log line while being kept internally by PDI. Set to 0 to keep all rows indefinitely (default) |
+
 ## kitchen--作业执行器
 
 > 执行作业
@@ -95,3 +117,23 @@ kitchen.sh -file=/home/job/huimin.kjb >> /home/ log/kettle.log
 ./kitchen.sh -rep=kettle1 -user=admin -pass=admin -level=Basic -job=job
 ```
 
+| Switch          | urpose                                                       |
+| --------------- | ------------------------------------------------------------ |
+| rep             | Enterprise or database repository name, if you are using one |
+| user            | Repository username                                          |
+| pass Repository | password                                                     |
+| job             | The name of the job (as it appears in the repository) to launch |
+| dir             | The repository directory that contains the job, including the leading slash |
+| file            | If you are calling a local KJB file, this is the filename, including the path if it is not in the local directory |
+| level           | The logging level (Basic, Detailed, Debug, Rowlevel, Error, Nothing) |
+| logfile         | A local filename to write log output to                      |
+| listdir         | Lists the sub-directories within the specified repository directory |
+| listjob         | Lists the jobs in the specified repository directory         |
+| listrep         | Lists the available repositories                             |
+| export          | Exports all linked resources of the specified job. The argument is the name of a ZIP file. |
+| norep           | Prevents Kitchen from logging into a repository. If you have set the KETTLE_REPOSITORY, KETTLE_USER, and KETTLE_PASSWORD environment variables, then this option will enable you to prevent Kitchen from logging into the specified repository, assuming you would like to execute a local KTR file instead. |
+| version         | Shows the version, revision, and build date                  |
+| param           | Set a named parameter in a name=value format. For example: -param:FOO=bar |
+| listparam       | List information about the defined named parameters in the specified job. |
+| maxloglines     | The maximum number of log lines that are kept internally by PDI. Set to 0 to keep all rows (default) |
+| maxlogtimeout   | The maximum age (in minutes) of a log line while being kept internally by PDI. Set to 0 to keep all rows indefinitely (default) |
