@@ -44,3 +44,10 @@ git remote -v
 git remote add origin [ssh链接]
 ```
 
+### 合并分支
+
+```
+git pull拉取所有代码到本地
+git merge work 合并work分支中的新内容到本地分支
+```
+
