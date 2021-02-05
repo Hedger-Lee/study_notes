@@ -22,13 +22,26 @@
 
 ### 1.4 监听
 
-```sql
---启动监听
+```shell
+# 启动监听
 lsnrctl start
---查看监听状态
+# 查看监听状态
 lsnrctl status
---关闭监听
+# 关闭监听
 lsnrctl stop
+
+# oracle服务器自动启动监听和数据库
+vim /etc/oratab
+# 修改
+HEDGER:/data/oracle/product/11.2.0/db_1:N
+# 为
+HEDGER:/data/oracle/product/11.2.0/db_1:Y
+# 将N改为Y
+
+vim /etc/rc.d/rc.local
+# 添加
+su oracle -lc /data/oracle/product/11.2.0/db_1/bin/dbstart
+su oracle -lc "/data/oracle/bin/lsnrctl start"
 ```
 
 ### 1.5 字符集
@@ -392,7 +405,7 @@ oerr ora 39213
 
 解决
 
-```
+```sql
 以sysdba连接
 执行
 exec dbms_metadata_util.load_stylesheets;
